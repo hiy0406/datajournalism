@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import altair as alt
 plt.rcParams['font.family'] = 'NanumGothic'
 
-path = "datajournalism/"
+path = "/datajournalism/"
 
 @st.cache
 def load_data(filename):
