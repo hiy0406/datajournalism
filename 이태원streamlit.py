@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 import altair as alt
 
+fm._rebuild()
 font_path = ["./NanumCoding.ttf",]
 font_files=fm.findSystemFonts(fontpaths=font_path)
 font_list = fm.createFontList(font_files)
