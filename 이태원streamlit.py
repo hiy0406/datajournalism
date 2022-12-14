@@ -26,29 +26,20 @@ st.write("  2022년 10월 29일, 이태원에서 비극적인 압사 참사가 �
 st.write("  서울에 거주하고 있는 2030 청년들은 이날 수많은 연락들을 받으셨을 거예요. 가족들은 물론 주변 지인들 모두 급하게 연락을 돌려 서로의 안부를 확인하고 가슴을 쓸어내렸다고 합니다. 실제로 국내 이동통신 3사에 따르면, 참사 발생한 직후부터 다음날까지 전국적으로 유의미한 트래픽 증가가 있었다고 해요.  사람들은 한 명씩 늘어나는 부상자와 사망자 수를 보며 엄청난 공포감에 휩싸였습니다. 서울 도심에서 이러한 대규모 인명피해가 발생한 것은 1995년 삼풍백화점 이후로 처음이었기 때문이었어요. 정부는 참사 이후 10월 30일부터 11월 5일 밤 24시까지를 국가애도기간으로 지정하고, 사고 발생지역인 서울시 용산구를 특별재난지역으로 선포했습니다." )
 st.write("  이 참사는 모두에게 큰 트라우마를 남겼습니다. 아수라장 같던 곳을 겨우 살아난 생존자들에게, 한순간에 사랑하는 사람들을 잃은 유가족과 친구, 동료들에게, 그리고 그 상황을 지켜봤던 우리들에게요." )
 
-data1 = [82.4,17.6]
-data2 = [62.5,37.5]
-data3 = [60.7,39.3]
-labels=['그렇다','그렇지않다']
-
-colors = sb.color_palette('pastel')
-fig1 = plt.figure(figsize=(8,4))
-plt.pie(data1, labels=labels, colors=colors, autopct='%.1f%%')
-fig2 = plt.figure(figsize=(8,4))
-plt.pie(data2, labels=labels, colors=colors, autopct='%.1f%%')
-fig3 = plt.figure(figsize=(8,4))
-plt.pie(data3, labels=labels, colors=colors, autopct='%.1f%%')
 
 option = st.selectbox('이태원 참사가 미치는 영향에 대한 심각성 인식',
                      ('한국 사회 전체에 미치는 영향이 심각하다.', 
                      '나의 또래 집단에 미치는 영향이 심각하다.', 
                      '나에게 미치는 영향이 심각하다.'))	
 if option=='한국 사회 전체에 미치는 영향이 심각하다.':
-    st.pyplot(fig1)
+    img=Image.open("./poll1.png")
+    st.image(img)
 elif option=='나의 또래 집단에 미치는 영향이 심각하다.':
-    st.pyplot(fig2)
+    img=Image.open("./poll2.png")
+    st.image(img))
 elif option=='나에게 미치는 영향이 심각하다.':
-    st.pyplot(fig3)
+    img=Image.open("./poll2.png")
+    st.image(img)
 
 #참사 전후 이태원에 대한 인식 변화
 st.markdown("## 사고 전후 이태원에 대한 인식 변화")
