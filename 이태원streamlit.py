@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 import altair as alt
 
-font_fname = './utils/NanumGothic.ttf'
+font_fname = './NanumGothic.ttf'
 font_name = fm.FontProperties(fname=font_fname).get_name()
 matplotlib.rc('font', family=font_name)
 
