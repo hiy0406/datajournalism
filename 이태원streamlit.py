@@ -29,12 +29,12 @@ data3 = [60.7,39.3]
 labels=['그렇다','그렇지않다']
 
 colors = sb.color_palette('pastel')
-fig1 = plt.figure(figsize=(16,8))
-plt.pie(data1, labels=labels, colors=colors, autopct='%.0f%%')
-fig2 = plt.figure(figsize=(16,8))
-plt.pie(data2, labels=labels, colors=colors, autopct='%.0f%%')
-fig3 = plt.figure(figsize=(16,8))
-plt.pie(data3, labels=labels, colors=colors, autopct='%.0f%%')
+fig1 = plt.figure(figsize=(8,4))
+plt.pie(data1, labels=labels, colors=colors, autopct='%.1f%%')
+fig2 = plt.figure(figsize=(8,4))
+plt.pie(data2, labels=labels, colors=colors, autopct='%.1f%%')
+fig3 = plt.figure(figsize=(8,4))
+plt.pie(data3, labels=labels, colors=colors, autopct='%.1f%%')
 
 option = st.selectbox('이태원 참사가 미치는 영향에 대한 심각성 인식',
                      ('한국 사회 전체에 미치는 영향이 심각하다.', 
