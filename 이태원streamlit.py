@@ -36,7 +36,7 @@ if option=='한국 사회 전체에 미치는 영향이 심각하다.':
     st.image(img)
 elif option=='나의 또래 집단에 미치는 영향이 심각하다.':
     img=Image.open("./poll2.png")
-    st.image(img))
+    st.image(img)
 elif option=='나에게 미치는 영향이 심각하다.':
     img=Image.open("./poll2.png")
     st.image(img)
