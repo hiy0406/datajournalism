@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 import altair as alt
 
-font_path = "./08서울남산체 B.ttf"
+font_path = "NanumGothic.ttf"
 font_family=fm.FontProperties(fname=font_path).get_name()
 plt.rcParams["font.family"] = font_family
 
