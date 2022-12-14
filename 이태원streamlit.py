@@ -42,7 +42,7 @@ st.write("사고 이후 유가족과 현장에 있었던 사람들 외, 사고 �
 st.write("심리치료를 받아야 할 정도로 심각한 트라우마가 생긴 사람들 외에도, 사람들의 일상에는 조금씩 변화가 시작되었습니다. 놀이공원, 공연장 등 사람들이 많이 모이는 장소는 물론, 익숙했던 출퇴근길이 언제든 사고가 날 수 있는 ‘위험한 공간’으로 여겨지기 시작했습니다.  지하철이나 버스 등의 일상적인 공간도 불편해지게 된 것이죠. ")
 st.write("아래 데이터는 네이버 검색엔진을 통해 분석한 ‘이태원' 관련 검색수입니다. 저기 확 떨어진 지점 보이시나요? 이태원 참사가 발생했던 직후 네이버 검색량은 현저하게 감소하고 있는 것을 확인할 수 있었습니다.")
 
-searchdata=load_data("./2017searching.csv")
+searchdata=pd.read_csv("./2017searching.csv")
 from datetime import datetime
 searchdata.date = searchdata.date.apply(lambda d: datetime.strptime(d, "%Y-%m-%d"))
 searchdata.index = searchdata.date
