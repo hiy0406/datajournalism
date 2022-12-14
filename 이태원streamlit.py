@@ -99,9 +99,11 @@ if media == "유튜브":
     img=Image.open("./youtube.png")
     st.image(img)
 elif media == "네이버 뉴스":
-    pass
+    img=Image.open("./naver.png")
+    st.image(img)
 elif media == "다음 뉴스":
-    pass
+    img=Image.open("./daum.png")
+    st.image(img)
  
 
 img=Image.open("./image5.png")
