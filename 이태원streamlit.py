@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from PIL import Image
 import seaborn as sb
+import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 import altair as alt
