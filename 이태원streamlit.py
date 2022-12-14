@@ -10,7 +10,7 @@ import altair as alt
 
 font_path = ["./NanumCoding.ttf",]
 font_files=fm.findSystemFonts(fontpaths=font_path)
-font_list = fm.creatFontList(font_files)
+font_list = fm.createFontList(font_files)
 font_name= font_manager.FontProperties(fname=font_path).get_name()
 fm.fontManager.ttflist.extent(font_list)
 
