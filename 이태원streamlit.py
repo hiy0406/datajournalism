@@ -85,10 +85,10 @@ st.write("서울시는 해당 법안의 신속한 처리를 요구하고 있지�
 
 st.subheader("미디어 별 댓글 분석")
 media = st.radio("미디어를 선택해주세요", ("유튜브", "네이버 뉴스", "다음 뉴스"))	
-if selected_item == "유튜브":
+if media == "유튜브":
     img=Image.open("./youtube.png")
     st.image(img)
-elif selected_item == "네이버 뉴스":
+elif media == "네이버 뉴스":
     pass
-elif selected_item == "다음 뉴스":
+elif media == "다음 뉴스":
     pass
