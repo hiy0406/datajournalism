@@ -54,7 +54,7 @@ dt1 = st.date_input("첫 날짜 설정 (2017-12-01 이후로 선택하세요)")
 dt2 = st.date_input("마지막 날짜 설정 (2022-12-01 이전으로 선택하세요)")
 
 searching=pd.read_csv("./2017searching.csv")
-st.line_chart(data=searching, x=searching[date], y=searching[search])
+st.line_chart(data=searching, x=searching['date'], y=searching['search'])
 
 st.write(" 실제로 서울시가 제공하는 데이터에 따르면, 이태원 1동 유동인구가 참사 이전(10월 넷째주) 대비 11월 2주까지 30.5% 감소했으며, 매출 또한 61.7% 감소했다고 합니다. 사람들의 트라우마가 이태원으로 향하는 즐거운 발걸음들을 끊은 것이지요.")
           
