@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 st.title("10.29(2022) 참사, 남겨진 상인들")
 img=Image.open("./image1.png")
 st.image(img)
-st.caption("사람들의 발길이 끊긴 그곳에는 오늘도 가게 문을 여는 상인들이 있습니다.")
+st.caption("\n사람들의 발길이 끊긴 그곳에는 오늘도 가게 문을 여는 상인들이 있습니다.")
 st.markdown("---")
 
 st.write("  기사를 시작하기에 앞서, 10.29(2022) 참사로 사망한 분들의 명복을 빕니다." )
