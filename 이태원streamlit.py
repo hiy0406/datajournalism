@@ -26,10 +26,10 @@ if option=='한국 사회 전체에 미치는 영향이 심각하다.':
     st.image(img, caption="*한국언론진흥재단 미디어연구센터 온라인 설문조사(2022년 11월 25일~30일, N=1000")
 elif option=='나의 또래 집단에 미치는 영향이 심각하다.':
     img=Image.open("./poll2.png")
-    st.image(img)
+    st.image(img, caption="*한국언론진흥재단 미디어연구센터 온라인 설문조사(2022년 11월 25일~30일, N=1000")
 elif option=='나에게 미치는 영향이 심각하다.':
     img=Image.open("./poll3.png")
-    st.image(img)
+    st.image(img, caption="*한국언론진흥재단 미디어연구센터 온라인 설문조사(2022년 11월 25일~30일, N=1000")
 
 st.markdown("---")
 
