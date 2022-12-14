@@ -39,10 +39,9 @@ st.write("아래 데이터는 네이버 검색엔진을 통해 분석한 ‘이�
 
 
 @st.cache
-def load_data(filename):
-    data = pd.read_csv(filename)
-    return data
-searchdata=load_data("./2017searching.csv")
+def load_data():
+  return pd.csv_read("./2017searching.csv")
+searchdata = load_data()
 from datetime import datetime
 searchdata.date = searchdata.date.apply(lambda d: datetime.strptime(d, "%Y-%m-%d"))
 searchdata.index = searchdata.date
