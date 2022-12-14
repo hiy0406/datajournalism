@@ -152,7 +152,7 @@ if cb3:
   
 cb4 = st.checkbox("두 번째 키워드-전체 댓글 보기")	
 if cb4:
-  comment1 = load_data()
+  comment2 = load_data()
   st.dataframe(comment2['reply'])
 
 
