@@ -114,13 +114,13 @@ def load_data():
   data = pd.read_csv("./comment1.csv")
   return data
 
-cb1 = st.checkbox("첫 번째 키워드-대표 댓글 보기")	
+cb1 = st.checkbox("첫 번째 키워드 대표 댓글 보기")	
 if cb1:
   st.markdown("> “이태원에 모든 상점은 당연히 아니겠지만 분명히 사고에 책임이 있는 가게도 있는거 아닌가? 불법건출물 가건물이나 도로점유물 등 최소한 상인회는 좀 반성해야 한다고”")
   st.markdown("> “할로윈때 돈뽑아먹을 생각만했지 도로변에 테이블 내놓고 장사해서 더 혼잡을 부추기고 방관한 이태원 상인들도 책임이 있다고 본다.”")
   st.markdown("> “솔직히 상인들이 제일 나쁨. 통제, 책임은 경찰, 정부에게 떠넘기고, 본인들은 돈 빨아먹는데만 급급했잖아. 쎄하다 싶음 자치적으로 상인들이 통제했어야지. 미디어에서 언급 안하니 입꾹에다 징징거리고 있네 ㅉㅉ 응?? 사람들 다 알고 있다~~ 게다가 사망자 속출하는데 댄스음악 틀고 있고, 건물 안으로 못드가게 막아?? ㅉㅉ”")
 
-cb2 = st.checkbox("첫 번째 키워드-전체 댓글 보기")	
+cb2 = st.checkbox("첫 번째 키워드 전체 댓글 보기")	
 if cb2:
   comment1 = load_data()
   st.dataframe(comment1['reply'])
@@ -142,7 +142,7 @@ def load_data():
   data = pd.read_csv("./comment2.csv")
   return data
 
-cb3 = st.checkbox("두 번째 키워드-대표 댓글 보기")	
+cb3 = st.checkbox("두 번째 키워드 대표 댓글 보기")	
 if cb3:
   st.markdown(">  “저길 어떻게 가냐”, ”트라우마 때문에 밥먹으러도 못갈듯 하다…”")
   st.markdown("> “아마 저긴 평생 안갈듯. 저긴 이제 끝났다고 봐야지. 완전 재계발해서 밀어버리고 새로운 무언가로 만들면 몰라도 이 사건 기억하는 사람들이 있는 한 놀러가는 장소에서는 영원히 아웃이다.”")
@@ -150,7 +150,7 @@ if cb3:
   st.markdown("> “솔직히 귀신들로 바글바글할거 같아서 누가가냐”")
   st.markdown("> “영혼들이 찜찜해서”")
   
-cb4 = st.checkbox("두 번째 키워드-전체 댓글 보기")	
+cb4 = st.checkbox("두 번째 키워드 전체 댓글 보기")	
 if cb4:
   comment2 = load_data()
   st.dataframe(comment2['reply'])
