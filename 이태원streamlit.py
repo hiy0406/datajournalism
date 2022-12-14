@@ -38,7 +38,7 @@ elif option=='나의 또래 집단에 미치는 영향이 심각하다.':
     img=Image.open("./poll2.png")
     st.image(img)
 elif option=='나에게 미치는 영향이 심각하다.':
-    img=Image.open("./poll2.png")
+    img=Image.open("./poll3.png")
     st.image(img)
 
 #참사 전후 이태원에 대한 인식 변화
