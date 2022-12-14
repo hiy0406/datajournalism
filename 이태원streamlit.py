@@ -41,13 +41,14 @@ st.markdown("### '이태원' 키워드 관련 검색량 추이")
 st.markdown("> 검색어: 이태원맛집, 이태원음식점, 이태원식당, 이태원밥, 이태원카페")
 @st.cache
 def load_data():
-  return pd.read_csv("./2017searching.csv")
+  data = pd.read_csv("./2017searching.csv")
+  from datetime import datetime
+  data.date = data.date.apply(lambda d: datetime.strptime(d, "%Y-%m-%d"))
+  data.index = data.date
+  data = data.drop(["date"], axis=1)
+  return data
+
 searchdata = load_data()
-from datetime import datetime
-searchdata.date = searchdata.date.apply(lambda d: datetime.strptime(d, "%Y-%m-%d"))
-searchdata.index = searchdata.date
-searchdata = searchdata.drop(["date"], axis=1)
-searchdata.head()
 st.line_chart(searchdata)
 
 st.write(" 실제로 서울시가 제공하는 데이터에 따르면, 이태원 1동 유동인구가 참사 이전(10월 넷째주) 대비 11월 2주까지 30.5% 감소했으며, 매출 또한 61.7% 감소했다고 합니다. 사람들의 트라우마가 이태원으로 향하는 즐거운 발걸음들을 끊은 것이지요.")
