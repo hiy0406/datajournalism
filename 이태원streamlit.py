@@ -4,11 +4,11 @@ import numpy as np
 from PIL import Image
 import seaborn as sb
 import matplotlib.pyplot as plt
-from matplotlib import font_manager
+from matplotlib import font_manager, rc
 import altair as alt
 font_path = "./08서울남산체 B.ttf"
-font_name = font_manager.FontProperties(fname=font_path).get_name()
-plt.rc('font', family=font_name)
+font = font_manager.FontProperties(fname=font_path).get_name()
+rc('font', family=font)
 
 @st.cache
 def load_data(filename):
