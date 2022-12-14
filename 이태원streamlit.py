@@ -4,11 +4,12 @@ import numpy as np
 from PIL import Image
 import seaborn as sb
 import matplotlib.pyplot as plt
-from matplotlib import font_manager, rc
+import matplotlib.font_manager as fm
 import altair as alt
+
 font_path = "./08서울남산체 B.ttf"
-font = font_manager.FontProperties(fname=font_path).get_name()
-rc('font', family=font)
+font_family=fm.FontProperties(fname=font_path).getname()
+plt.rcParams["font.family"]
 
 @st.cache
 def load_data(filename):
@@ -56,26 +57,26 @@ img=Image.open(path+"after10.png")
 st.image(img, caption='2022-10-30 ~ 2022-12-8')
 
 st.markdown("### 상권 지원 이후 현재까지의 워드클라우드")
-img=Image.open(path+"after_support.png")
+img=Image.open("./after_support.png")
 st.image(img, caption='2022-11-24~ 2022-12-8')
 
 st.markdown("### 참사 이전 한 달간의 워드클라우드")
-img=Image.open(path+"2022_10.png")
+img=Image.open("./2022_10.png")
 st.image(img, caption='2022-10-1 ~ 2022-10-28')
 
 st.markdown("### 참사 이전, 코로나 기간 동안의 워드클라우드")
-img=Image.open(path+"after_corona.png")
+img=Image.open("./after_corona.png")
 st.image(img, caption='2020-01-20 ~ 2022-10-28')
 
 st.markdown("### 코로나 이전 기간의 워드클라우드")
-img=Image.open(path+"before_corona.png")
+img=Image.open("./before_corona.png")
 st.image(img, caption='2019-08-19 ~ 2020-01-19')
 
 st.markdown("---")
 
 #이태원 상인 지원에 대한 인식
 st.markdown("## 이태원 상인 지원에 대한 대중들의 반응")
-youtube_comments = load_data(path+"youtube_result2.csv")
+youtube_comments = load_data("./youtube_result2.csv")
 count=youtube_comments['new'].value_counts()
 labels = [0,1,'none']
 data = []
@@ -91,7 +92,7 @@ st.pyplot(fig0)
 st.markdown("---")
 
 #이태원 상권 변화
-DataFrame = load_data(path+'2017searching.csv')
+DataFrame = load_data('./2017searching.csv')
 
 st.markdown("## 이태원 상권 붕괴 현황")
 st.markdown("### 이태원 맛집 검색량 추이")
@@ -102,15 +103,15 @@ st.markdown("### 이태원 맛집 검색량 추이")
 # st.altair_chart(chart, use_container_width=True)
 
 st.markdown("### 이태원 1동의 유동인구 및 매출 변화")
-img=Image.open(path+"pop1.png")
+img=Image.open("./pop1.png")
 st.image(img)
-img=Image.open(path+"sales1.png")
+img=Image.open("./sales1.png")
 st.image(img)
 
 st.markdown("### 이태원 2동의 유동인구 및 매출 변화")
-img=Image.open(path+"pop2.png")
+img=Image.open("./pop2.png")
 st.image(img)
-img=Image.open(path+"sales2.png")
+img=Image.open("./sales2.png")
 st.image(img)
 
 st.markdown("---")
