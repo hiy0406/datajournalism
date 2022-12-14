@@ -53,7 +53,7 @@ elif option=='나에게 미치는 영향이 심각하다.':
 st.markdown("## 사고 전후 이태원에 대한 인식 변화")
 
 st.markdown("### 참사 이후 현재까지의 워드클라우드")
-img=Image.open(path+"after10.png")
+img=Image.open("./after10.png")
 st.image(img, caption='2022-10-30 ~ 2022-12-8')
 
 st.markdown("### 상권 지원 이후 현재까지의 워드클라우드")
