@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from matplotlib import font_manager
 import altair as alt
 font_path = "./08서울남산체 B.ttf"
-font_name = font_manager.FontProperties(fname=font_path).get_name
+font_name = font_manager.FontProperties(fname=font_path).get_name()
 plt.rc('font', family=font_name)
 
 @st.cache
