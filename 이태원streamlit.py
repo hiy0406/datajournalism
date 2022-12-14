@@ -9,7 +9,7 @@ import altair as alt
 
 font_path = "./08서울남산체 B.ttf"
 font_family=fm.FontProperties(fname=font_path).get_name()
-plt.rcParams["font.family"]
+plt.rcParams["font.family"] = font_family
 
 @st.cache
 def load_data(filename):
